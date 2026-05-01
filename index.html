@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surprizë për Genisën ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="hearts-container"></div>
+
+  <audio id="backgroundMusic" src="Yll Limani - Ty.mp3"></audio>
+
+  <section id="startScreen" class="screen active">
+    <h1>Një surprizë e vogël për ty ❤️</h1>
+    <p>Preke ekranin për ta filluar</p>
+    <button onclick="startSurprise()">Fillo</button>
+  </section>
+
+  <section id="countdownScreen" class="screen">
+    <div id="countdown">3</div>
+  </section>
+
+  <section id="birthdayScreen" class="screen">
+    <img src="images/sticker.png.png" alt="Happy Birthday" class="birthday-sticker">
+  </section>
+
+  <section id="cardScreen" class="screen">
+    <div class="card" onclick="openCard()">
+      <div class="card-cover">
+        <h2>Preke kartolinën 🤍</h2>
+      </div>
+
+      <div class="card-inside">
+        <h2>Gëzuar ditëlindjen Genisa ❤️</h2>
+        <img id="photo" src="images/Foto1.jpg.jpeg" alt="Genisa" onclick="changePhoto(event)">
+        <p class="photo-text">Preke foton për kujtime të tjera</p>
+        <button onclick="showFinalText(event)">Shfaq mesazhin</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="finalScreen" class="screen">
+    <div class="message-box">
+      <h1>Genisa ❤️</h1>
+      <p>
+        Sot nuk është thjesht dita jote e lindjes,<br>
+        është dita kur jeta ime u bë më e bukur… sepse ekziston ti.
+      </p>
+
+      <p>
+        Më kujtohet dita kur dolëm për herë të parë për t’u njohur,
+        ajo ndjenjë e veçantë që nuk mund ta përshkruaj me fjalë…
+        dhe që prej asaj dite, gjithçka ka ndryshuar për mirë.
+      </p>
+
+      <p>
+        Më kujtohen momentet tona… kur kemi qeshur, kur kemi kaluar vikendet bashkë,
+        kur kemi qëndruar pranë njëri-tjetrit pa pasur nevojë për shumë fjalë.
+      </p>
+
+      <p>
+        Edhe ato momente kur kemi qajtur bashkë,
+        duke u shqetësuar për njëri-tjetrin…
+        janë dëshmi që ajo që kemi është e vërtetë dhe e fortë.
+      </p>
+
+      <p>
+        Dhe ndoshta një nga momentet më të bukura,
+        kur kemi bërë video për fëmijët tanë…
+        duke ëndërruar për një të ardhme bashkë.
+      </p>
+
+      <p>
+        Ti nuk je vetëm e dashura ime…
+        ti je personi që më kupton, që më bën të ndihem i plotë,
+        dhe arsyeja pse unë buzëqesh çdo ditë.
+      </p>
+
+      <p>
+        Faleminderit që je pjesë e jetës sime.<br>
+        Faleminderit që je ti.
+      </p>
+
+      <h2>Gëzuar ditëlindjen, dashuria ime ❤️</h2>
+      <h3>Të dua më shumë çdo ditë.</h3>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
