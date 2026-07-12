@@ -12,18 +12,18 @@ const photo = document.getElementById("photo");
 const backgroundMusic = document.getElementById("backgroundMusic");
 
 const photos = [
-  "images/Foto1.jpg.jpeg",
-  "images/Foto2.jpg.jpeg",
-  "images/Foto3.jpg.jpeg",
-  "images/Foto4.jpg.jpeg",
-  "images/Foto5.jpg.jpeg",
-  "images/Foto6.jpg.jpeg",
-  "images/Foto7.jpg.jpeg",
-  "images/Foto8.jpg.jpeg",
-  "images/Foto9.jpg.jpeg",
-  "images/Foto10.jpg.jpeg",
-  "images/Foto11.jpg.jpeg",
-  "images/Foto12.jpg.jpeg"
+  "Foto1.jpg.jpeg",
+  "Foto2.jpg.jpeg",
+  "Foto3.jpg.jpeg",
+  "Foto4.jpg.jpeg",
+  "Foto5.jpg.jpeg",
+  "Foto6.jpg.jpeg",
+  "Foto7.jpg.jpeg",
+  "Foto8.jpg.jpeg",
+  "Foto9.jpg.jpeg",
+  "Foto10.jpg.jpeg",
+  "Foto11.jpg.jpeg",
+  "Foto12.jpg.jpeg"
 ];
 
 let currentPhoto = 0;
