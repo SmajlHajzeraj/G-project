@@ -12,18 +12,18 @@ const photo = document.getElementById("photo");
 const backgroundMusic = document.getElementById("backgroundMusic");
 
 const photos = [
-  "images/Foto1.jpg.jpeg",
-  "images/Foto2.jpg.jpeg",
-  "images/Foto3.jpg.jpeg",
-  "images/Foto4.jpg.jpeg",
-  "images/Foto5.jpg.jpeg",
-  "images/Foto6.jpg.jpeg",
-  "images/Foto7.jpg.jpeg",
-  "images/Foto8.jpg.jpeg",
-  "images/Foto9.jpg.jpeg",
-  "images/Foto10.jpg.jpeg",
-  "images/Foto11.jpg.jpeg",
-  "images/Foto12.jpg.jpeg",
+  "Foto1.jpg.jpeg",
+  "Foto2.jpg.jpeg",
+  "Foto3.jpg.jpeg",
+  "Foto4.jpg.jpeg",
+  "Foto5.jpg.jpeg",
+  "Foto6.jpg.jpeg",
+  "Foto7.jpg.jpeg",
+  "Foto8.jpg.jpeg",
+  "Foto9.jpg.jpeg",
+  "Foto10.jpg.jpeg",
+  "Foto11.jpg.jpeg",
+  "Foto12.jpg.jpeg"
 ];
 
 let currentPhoto = 0;
@@ -40,10 +40,11 @@ function showScreen(screenName) {
 function startSurprise() {
   showScreen("countdown");
   startHearts();
-  
-  // Inicia a música
+
   backgroundMusic.currentTime = 0;
-  backgroundMusic.play();
+  backgroundMusic.play().catch(() => {
+    console.log("Audio playback blocked until user interaction.");
+  });
 
   let number = 3;
   countdownText.textContent = number;
@@ -69,8 +70,7 @@ function showBirthdaySticker() {
 }
 
 function openCard() {
-  const card = document.querySelector(".card");
-  card.classList.add("open");
+  document.querySelector(".card").classList.add("open");
 }
 
 function changePhoto(event) {
@@ -96,17 +96,18 @@ function startHearts() {
 
   setInterval(() => {
     const heart = document.createElement("div");
-    heart.classList.add("heart");
+    heart.className = "heart";
     heart.innerHTML = "❤️";
 
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = Math.random() * 3 + 3 + "s";
-    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
 
     heartsContainer.appendChild(heart);
 
     setTimeout(() => {
       heart.remove();
     }, 6000);
+
   }, 250);
 }
